@@ -12,3 +12,8 @@ class Card extends Component {
     );
   }
 }
+
+const card = document.getElementById('card');
+if (card) {
+  ReactDOM.render(<Card />, card);
+}
