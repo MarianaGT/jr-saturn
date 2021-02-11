@@ -8,7 +8,7 @@ const panda = {
   width: '200px'
 };
 
-class RedPanda extends React.Component {
+class RedPanda extends Component {
   render() {
     return (
       <div>
