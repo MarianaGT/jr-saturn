@@ -19,14 +19,26 @@ class Hello extends Component {
     super(props);
     // info changing in the lifetime of a component
     this.state = {
-      clicked: true
+      clicked: false,
+      counter: 0
     };
   }
 
   handleClick = () => {
-    // change the state (toggle)
+    /* change the state (toggle) -> it re-renders automatically
+    it substitutes:
+    const div = document.querySelector('div');
+    div.addEventListener('click', event) => {
+      if (event.currentTarget.classList.contains('clicked')) {
+        event.currentTarget.classList.remove('clicked');
+      } else {
+        event.currentTarget.classList.add('clicked');
+      }
+    });
+    */
     this.setState({
-      clicked: !this.state.clicked
+      clicked: !this.state.clicked,
+      counter: this.state.counter + 1
     });
   }
 
@@ -38,7 +50,7 @@ class Hello extends Component {
       - add an event listener */
       <div className={this.state.clicked ? 'clicked' : null}
         onClick={this.handleClick}>
-        Hello {this.props.name}
+        Hello {this.props.name} {this.state.counter}
       </div>
     );
   }
