@@ -18,7 +18,7 @@ class RedPanda extends Component {
         alt={panda.alt}
         width={panda.width}/>
       </div>
-    )
+    );
   }
 }
 
