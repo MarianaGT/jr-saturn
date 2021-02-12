@@ -9,12 +9,16 @@ class Clock extends React.Component {
   render() {
     return <div>{this.state.date.toLocaleTimeString()}</div>;
   }
+
   componentDidMount() {
-    // Paste your code here.
     const oneSecond = 1000;
-setInterval(() => {
-  this.setState({ date: new Date() });
-}, oneSecond);
+    this.intervalID = setInterval(() => {
+    this.setState({ date: new Date() });
+    }, oneSecond);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalID);
   }
 }
 
