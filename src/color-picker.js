@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const colorNames = ['Aquamarine', 'BlueViolet', 'Chartreuse', 'CornflowerBlue', 'Thistle', 'SpringGreen', 'SaddleBrown', 'PapayaWhip', 'MistyRose'];
 
 export default function ColorPicker() {
-  const [color, setColor] = useState();
+  const [color, setColor] = useState('Thistle');
 
  const divStyle = {backgroundColor: color};
 
